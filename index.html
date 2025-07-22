@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasuni Uthpala | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'linkedin-blue': '#0A66C2', // Custom LinkedIn brand blue
+                        'github-gray': '#333333', // Custom GitHub dark gray
+                        'facebook-blue': '#1877F2', // Custom Facebook blue
+                        'instagram-gradient-start': '#833AB4', // Instagram gradient start
+                        'instagram-gradient-end': '#C13584', // Instagram gradient end
+                        'message-green': '#25D366', // WhatsApp/Message green
+                    },
+                    keyframes: {
+                        'tooltip-appear': {
+                            '0%': { transform: 'translateX(-10px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        }
+                    },
+                    animation: {
+                        'tooltip-appear': 'tooltip-appear 0.3s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] text-white font-[Inter] relative overflow-x-hidden">
+    <aside class="fixed top-1/4 left-4 flex flex-col gap-4 z-50 bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-4 items-center">
+        <a href="#" class="sidebar-icon group hover:bg-github-gray">
+            <img src="https://img.icons8.com/ios-filled/32/github.png" class="icon-img" alt="GitHub"/>
+            <span class="tooltip-text tooltip-github">GitHub</span>
+        </a>
+
+        <a href="#" class="sidebar-icon group hover:bg-linkedin-blue">
+            <img src="https://img.icons8.com/ios-filled/32/linkedin.png" class="icon-img" alt="LinkedIn"/>
+            <span class="tooltip-text tooltip-linkedin">LinkedIn</span>
+        </a>
+
+        <a href="#" class="sidebar-icon group hover:bg-instagram-gradient">
+            <img src="https://img.icons8.com/ios-filled/32/instagram-new.png" class="icon-img" alt="Instagram"/>
+            <span class="tooltip-text tooltip-instagram">Instagram</span>
+        </a>
+
+        <a href="#" class="sidebar-icon group hover:bg-message-green">
+            <img src="https://img.icons8.com/ios-filled/32/message-squared.png" class="icon-img" alt="E-mail"/>
+            <span class="tooltip-text tooltip-message">E-mail</span>
+        </a>
+
+        <a href="#" class="sidebar-icon group hover:bg-purple-700">
+            <img src="https://img.icons8.com/ios-filled/32/phone.png" class="icon-img" alt="Phone"/>
+            <span class="tooltip-text tooltip-phone">Phone</span>
+        </a>
+    </aside>
+
+    <header class="sticky top-0 z-40 bg-black/60 backdrop-blur-md shadow-md py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+            <div class="text-xl font-bold text-purple-400">MyPortfolio ✨</div>
+            <nav>
+                <ul class="flex gap-6 font-medium">
+                    <li><a href="#home" class="hover:text-purple-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-purple-300">About</a></li>
+                    <li><a href="#education" class="hover:text-purple-300">Education</a></li>
+                    <li><a href="#skills" class="hover:text-purple-300">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-purple-300">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-purple-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade">Hello! I'm</h1>
+        <h2 class="text-6xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-pink-400 text-transparent bg-clip-text animate-slidein">Dasuni Uthpala</h2>
+        <p class="text-2xl text-purple-300 mb-6 animate-fade">FullStack Developer | Frontend Developer | UI/UX Designer</p>
+        <p class="max-w-2xl text-gray-300 mb-6">I build beautiful, functional, and user-focused digital experiences using code and design.</p>
+        <div class="space-x-4">
+            <a href="#projects" class="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full">View Projects</a>
+            <a href="#" class="border border-purple-300 px-6 py-2 rounded-full hover:bg-purple-700">Download Resume</a>
+        </div>
+    </section>
+
+    <section id="about" class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <h2 class="text-4xl font-bold mb-4 text-center animate-fade">ABOUT ME</h2>
+        <p class="text-gray-300 text-lg mb-12 text-center max-w-2xl">Discover my journey, passion, and the experiences that shape my work</p>
+
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12">
+            <div class="flex flex-col items-center lg:items-start flex-shrink-0 animate-slidein-delay">
+                <div class="relative w-72 h-96 rounded-lg overflow-hidden shadow-xl">
+                    <img src="assets/me.jpeg" alt="Dasuni Uthpala" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="flex-1 lg:pl-12 animate-fade-delay">
+                <h3 class="text-4xl font-bold mb-6">Hi! I’m Dasuni Uthpala</h3>
+                <p class="text-lg text-gray-200 mb-6 leading-relaxed">
+                    A third-year undergraduate student at SLIIT, pursuing a Bachelor of Science (BSc) Honours Degree in Information Technology.
+                    I’m passionate about crafting innovative and user-focused digital experiences that combine both creativity and functionality.
+                </p>
+                <p class="text-lg text-gray-200 mb-8 leading-relaxed">
+                    As a full-stack developer, frontend developer, and UI/UX designer, I enjoy working with modern technologies to bring ideas to life.
+                    Whether it's designing intuitive interfaces or building responsive web, I’m always excited to learn, experiment, and grow through
+                    both academic and personal projects.
+                </p>
+                <p class="text-lg text-gray-200 mb-8 leading-relaxed">
+                    I enjoy learning about the newest tools and design and development trends, and I have a strong interest in developing solutions that have an impact and increase efficiency and user experience.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-2 mt-4 animate-pop">
+                    <div class="flex-1 text-center bg-gradient-to-r from-purple-700 to-purple-900 rounded-sm p-1 shadow-sm">
+                        <p class="text-base font-bold text-purple-100 mb-0">3rd Year</p>
+                        <p class="text-xs text-purple-100">Undergraduate at SLIIT</p>
+                    </div>
+                    <div class="flex-1 text-center bg-gradient-to-r from-purple-700 to-purple-900 rounded-sm p-1 shadow-sm">
+                        <p class="text-base font-bold text-purple-100 mb-0">7+</p>
+                        <p class="text-xs text-purple-100">Projects Completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 px-6 bg-gradient-to-b from-black to-[#1a1a2e] text-center">
+  <h2 class="text-4xl font-bold mb-2">Education</h2>
+  <p class="text-gray-400 mb-12">My academic journey and achievements</p>
+
+  <div class="relative flex justify-center items-center">
+    <!-- Horizontal Line -->
+    <div class="absolute h-1 bg-purple-600 w-full top-1/2 transform -translate-y-1/2 z-0"></div>
+
+    <!-- Timeline Items -->
+    <div class="flex gap-28 z-10 mt-32">
+      <!-- School -->
+      <div class="relative group cursor-pointer" onclick="showDetails('school')">
+        <img src="assets/wns.png" alt="School Logo" class="w-24 h-24 rounded-lg border-4 border-white shadow-lg transition-transform duration-500 group-hover:scale-110"/>
+        <div id="school-details" class="hidden absolute top-28 right-1/2 transform -translate-x-1/2 w-[300px] p-10 bg-gray-900 text-left text-white rounded-lg shadow-lg border border-purple-600 animate-fade-in">
+          <h3 class="text-xl font-bold mb-1">G.C.E. Advanced Level</h3>
+          <p class="text-purple-300 font-medium mb-2">Walasmulla National School</p>
+          <p class="text-sm text-gray-300">Physical Science (2019 - 2022)</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs text-white">
+            <span class="bg-purple-700 px-2 py-1 rounded">CombineMaths-B</span>
+            <span class="bg-purple-700 px-2 py-1 rounded">Physics-S</span>
+            <span class="bg-purple-700 px-2 py-1 rounded">Chemistry-C</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIIT -->
+      <div class="relative group cursor-pointer" onclick="showDetails('uni')">
+        <img src="assets/sliit.png" alt="SLIIT Logo" class="w-24 h-24 rounded-lg border-4 border-white shadow-lg transition-transform duration-500 group-hover:scale-110"/>
+        <div id="uni-details" class="hidden absolute top-28 left-1/2 transform -translate-x-1/2 w-[500px] p-10 bg-gray-900 text-left text-white rounded-lg shadow-lg border border-purple-600 animate-fade-in">
+          <h3 class="text-2xl font-bold mb-1">BSC (Hons) in Information Technology</h3>
+          <p class="text-purple-300 font-medium mb-2">Sri Lanka Institute of Information Technology (SLIIT)</p>
+          <p class="text-sm text-gray-300 mb-3">2023 – 2027 (Present)</p>
+          <div class="flex flex-wrap gap-2 text-xs text-white">
+            <span class="bg-purple-700 px-2 py-1 rounded">Web Development</span>
+            <span class="bg-purple-700 px-2 py-1 rounded">Frontend Development</span>
+            <span class="bg-purple-700 px-2 py-1 rounded">UI/UX</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="skills" class="skills-section">
+        <h2 class="skills-title">SKILLS & TECHNOLOGIES</h2>
+        <div class="skills-underline"></div>
+        <p class="skills-desc">Here are the technologies and tools I work with to build modern, scalable, and efficient applications.</p>
+        
+        <div class="skills-filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="language">Programming languages</button>
+            <button class="filter-btn" data-filter="framework">Technologies & Frameworks</button>
+            <button class="filter-btn" data-filter="database">Database</button>
+            <button class="filter-btn" data-filter="tool">Tools</button>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-card" data-category="language"><img class="skill-img" src="assets/html.png" alt="HTML Logo"><span>HTML</span></div>
+            <div class="skill-card" data-category="language"><img class="skill-img" src="assets/css.png" alt="CSS Logo"><span>CSS</span></div>
+            <div class="skill-card" data-category="language"><img class="skill-img" src="assets/javascript.png" alt="JavaScript Logo"><span>JavaScript</span></div>
+            <div class="skill-card" data-category="language"><img class="skill-img" src="assets/c.png" alt="C Logo"><span>C</span></div>
+            <div class="skill-card" data-category="language"><img class="skill-img" src="assets/c++.png" alt="C++ Logo"><span>C++</span></div>
+            <div class="skill-card" data-category="language"><img class="skill-img" src="assets/java.png" alt="Java Logo"><span>Java</span></div>
+            <div class="skill-card" data-category="language"><img class="skill-img" src="assets/thailwind.png" alt="Tailwind CSS Logo"><span>Tailwind CSS</span></div>
+            <div class="skill-card" data-category="framework"><img class="skill-img" src="assets/react.png" alt="React JS Logo"><span>React JS</span></div>
+            <div class="skill-card" data-category="framework"><img class="skill-img" src="assets/nextjs.png" alt="Next JS Logo"><span>Next JS</span></div>
+            <div class="skill-card" data-category="framework"><img class="skill-img" src="assets/nodejs.png" alt="Node JS Logo"><span>Node JS</span></div>
+            <div class="skill-card" data-category="framework"><img class="skill-img" src="assets/expressjs.png" alt="Express JS Logo"><span>Express JS</span></div>
+            <div class="skill-card" data-category="database"><img class="skill-img" src="assets/mysql.png" alt="MySQL Logo"><span>MySQL</span></div>
+            <div class="skill-card" data-category="database"><img class="skill-img" src="assets/mongodb.png" alt="MongoDB Logo"><span>MongoDB</span></div>
+            <div class="skill-card" data-category="tool"><img class="skill-img" src="assets/git.png" alt="Git Logo"><span>Git</span></div>
+            <div class="skill-card" data-category="tool"><img class="skill-img" src="assets/github.png" alt="GitHub Logo"><span>GitHub</span></div>
+            <div class="skill-card" data-category="tool"><img class="skill-img" src="assets/vscode.png" alt="VS Code Logo"><span>VS Code</span></div>
+            <div class="skill-card" data-category="tool"><img class="skill-img" src="assets/postman.png" alt="Postman Logo"><span>Postman</span></div>
+            <div class="skill-card" data-category="tool"><img class="skill-img" src="assets/mongodb.png" alt="MongoDB Logo"><span>MongoDB</span></div>
+            <div class="skill-card" data-category="tool"><img class="skill-img" src="assets/canva.png" alt="Canva Logo"><span>Canva</span></div>
+            <div class="skill-card" data-category="tool"><img class="skill-img" src="assets/figma.png" alt="Figma Logo"><span>Figma</span></div>
+
+        </div>
+    </section>
+
+  <section id="projects" class="projects-section">
+    <h2 class="projects-title">My Projects</h2>
+    <p class="projects-subtitle">A collection of my recent work, showcasing my skills and passion for development.</p>
+    <div class="projects-filter-bar">
+      <button class="project-filter-btn active" data-filter="web">Web Development</button>
+      <button class="project-filter-btn" data-filter="mobile">Mobile Application</button>
+      <button class="project-filter-btn" data-filter="uiux">UI/UX Design</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-category="web">
+        <img class="project-img" src="assets/tea.png" alt="Diamond Crown">
+        <div class="project-content">
+          <h3>Diamond Crown</h3>
+          <p>A full-stack e-commerce solution with user authentication, product management, and secure payments.</p>
+          <div class="project-tags">
+            <span>React.js</span><span>MongoDB</span><span>Node.js</span><span>Tailwind CSS</span><span>Express.js</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-demo-btn">&#128279; Live Demo</a>
+            <a href="#" class="project-github-btn" title="GitHub"><img src="assets/github.png" alt="GitHub" class="github-icon"></a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="web">
+        <img class="project-img" src="assets/food.png" alt="Coffee Shop">
+        <div class="project-content">
+          <h3>Coffee Shop</h3>
+          <p>A responsive, modern UI built with HTML, CSS & JavaScript. Clean layout, smooth interactions, and mobile-friendly design. Ideal as a stylish frontend or base for e-commerce.</p>
+          <div class="project-tags">
+            <span>Html</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-demo-btn">&#128279; Live Demo</a>
+            <a href="#" class="project-github-btn" title="GitHub"><img src="assets/github.png" alt="GitHub" class="github-icon"></a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="web">
+        <img class="project-img" src="assets/task.png" alt="Coffee Shop">
+        <div class="project-content">
+          <h3>Coffee Shop</h3>
+          <p>A responsive, modern UI built with HTML, CSS & JavaScript. Clean layout, smooth interactions, and mobile-friendly design. Ideal as a stylish frontend or base for e-commerce.</p>
+          <div class="project-tags">
+            <span>Html</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-demo-btn">&#128279; Live Demo</a>
+            <a href="#" class="project-github-btn" title="GitHub"><img src="assets/github.png" alt="GitHub" class="github-icon"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2 class="contact-title">Get In Touch</h2>
+    <p class="contact-subtitle">Ready to start your next project? Let's create something amazing together.</p>
+    <div class="contact-container">
+      <div class="contact-form-panel">
+        <h3 class="contact-form-title">Send Message</h3>
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          <button type="submit" class="contact-send-btn">✈️ Send Message</button>
+        </form>
+      </div>
+      <div class="contact-info-panel">
+        <h3 class="contact-info-title">Let's Connect</h3>
+        <p class="contact-info-desc">I'm always interested in hearing about new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+        <div class="contact-info-list">
+          <div class="contact-info-item"><span class="contact-info-icon">📧</span><div><strong>Email</strong><br>ravindupiyumal483@gmail.com</div></div>
+          <div class="contact-info-item"><span class="contact-info-icon">📞</span><div><strong>Phone</strong><br>+94 74 012 0374</div></div>
+          <div class="contact-info-item"><span class="contact-info-icon">📍</span><div><strong>Location</strong><br>No.201/B Millaniya, Horana</div></div>
+        </div>
+        <div class="contact-social">
+          <span>Follow Me</span>
+          <a class="contact-social-btn github" href="#" target="_blank">GitHub</a>
+          <a class="contact-social-btn linkedin" href="#" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
