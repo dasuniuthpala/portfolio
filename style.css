@@ -220,13 +220,13 @@
   background: linear-gradient(135deg, #1a1333 0%, #231942 100%);
   padding: 60px 0 80px 0;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   position: relative;
 }
 .skills-title {
   font-size: 3rem;
   font-weight: 800;
-  color: #d291fa;
+  color: #fcfcfc;
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
@@ -696,4 +696,17 @@
 
 .nav-links a:hover {
     text-decoration: underline;
+}
+.key {
+  position: relative;
+  display: inline-block;
+  margin-top: 60px;
+}
+.key img {
+  vertical-align: middle;
+  animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }

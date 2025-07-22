@@ -123,3 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const arrow = document.querySelector('.key img');
+  if (arrow) {
+    arrow.style.animationPlayState = 'running';
+  }
+});
