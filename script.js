@@ -103,3 +103,14 @@ function showDetails(type) {
     document.getElementById('uni-details').classList.remove('hidden');
   }
 }
+
+// Add any interactive behavior here if needed
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert(`Redirecting to ${link.textContent}`);
+        });
+    });
+});
