@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Function to show education details (for onclick in HTML)
+// Function to show education details (for onclick and onmouseenter in HTML)
 function showDetails(type) {
   // Hide both details first
   document.getElementById('school-details').classList.add('hidden');
@@ -101,6 +101,15 @@ function showDetails(type) {
     document.getElementById('school-details').classList.remove('hidden');
   } else if (type === 'uni') {
     document.getElementById('uni-details').classList.remove('hidden');
+  }
+}
+
+// Function to hide education details (for onmouseleave in HTML)
+function hideDetails(type) {
+  if (type === 'school') {
+    document.getElementById('school-details').classList.add('hidden');
+  } else if (type === 'uni') {
+    document.getElementById('uni-details').classList.add('hidden');
   }
 }
 

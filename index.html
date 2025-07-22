@@ -128,7 +128,7 @@
         </div>
     </section>
 
-    <section id="education" class="py-20 px-6 bg-gradient-to-b from-black to-[#1a1a2e] text-center">
+<section id="education" class="py-20 px-6 bg-gradient-to-b from-black to-[#1a1a2e] text-center">
   <h2 class="text-4xl font-bold mb-2">Education</h2>
   <p class="text-gray-400 mb-12">My academic journey and achievements</p>
 
@@ -139,7 +139,7 @@
     <!-- Timeline Items -->
     <div class="flex gap-28 z-10 mt-32">
       <!-- School -->
-      <div class="relative group cursor-pointer" onclick="showDetails('school')">
+      <div class="relative group cursor-pointer" onclick="showDetails('school')" onmouseenter="showDetails('school')" onmouseleave="hideDetails('school')">
         <img src="assets/wns.png" alt="School Logo" class="w-24 h-24 rounded-lg border-4 border-white shadow-lg transition-transform duration-500 group-hover:scale-110"/>
         <div id="school-details" class="hidden absolute top-28 right-1/2 transform -translate-x-1/2 w-[300px] p-10 bg-gray-900 text-left text-white rounded-lg shadow-lg border border-purple-600 animate-fade-in">
           <h3 class="text-xl font-bold mb-1">G.C.E. Advanced Level</h3>
@@ -154,7 +154,7 @@
       </div>
 
       <!-- SLIIT -->
-      <div class="relative group cursor-pointer" onclick="showDetails('uni')">
+      <div class="relative group cursor-pointer" onclick="showDetails('uni')" onmouseenter="showDetails('uni')" onmouseleave="hideDetails('uni')">
         <img src="assets/sliit.png" alt="SLIIT Logo" class="w-24 h-24 rounded-lg border-4 border-white shadow-lg transition-transform duration-500 group-hover:scale-110"/>
         <div id="uni-details" class="hidden absolute top-28 left-1/2 transform -translate-x-1/2 w-[500px] p-10 bg-gray-900 text-left text-white rounded-lg shadow-lg border border-purple-600 animate-fade-in">
           <h3 class="text-2xl font-bold mb-1">BSC (Hons) in Information Technology</h3>
@@ -164,7 +164,6 @@
             <span class="bg-purple-700 px-2 py-1 rounded">Web Development</span>
             <span class="bg-purple-700 px-2 py-1 rounded">Frontend Development</span>
             <span class="bg-purple-700 px-2 py-1 rounded">UI/UX</span>
-            
           </div>
         </div>
       </div>
