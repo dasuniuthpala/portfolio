@@ -1,18 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const educationLogos = document.querySelectorAll(".education-logo");
-  const detailBoxes = document.querySelectorAll(".education-details");
+  // Education section: Toggle detail boxes on logo click
+  const educationLogos = document.querySelectorAll(".group.cursor-pointer");
+  const detailBoxes = document.querySelectorAll("#school-details, #uni-details");
 
   educationLogos.forEach((logo, index) => {
     logo.addEventListener("click", () => {
       // Hide all detail boxes
       detailBoxes.forEach((box) => {
-        box.classList.add("opacity-0", "scale-95", "pointer-events-none");
-        box.classList.remove("opacity-100", "scale-100", "pointer-events-auto");
+        box.classList.add("hidden");
       });
 
       // Show the selected one
-      detailBoxes[index].classList.remove("opacity-0", "scale-95", "pointer-events-none");
-      detailBoxes[index].classList.add("opacity-100", "scale-100", "pointer-events-auto");
+      detailBoxes[index].classList.remove("hidden");
     });
   });
 
@@ -27,15 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
+  // Skills filter logic
   const filterBtns = document.querySelectorAll('.filter-btn');
   const skillCards = document.querySelectorAll('.skill-card');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
-      // Remove active from all
+      // Remove active class from all buttons
       filterBtns.forEach(b => b.classList.remove('active'));
       this.classList.add('active');
       const filter = this.getAttribute('data-filter');
@@ -75,14 +73,16 @@ document.addEventListener('DOMContentLoaded', function() {
   if (projectFilterBtns.length) {
     projectFilterBtns.forEach(btn => {
       btn.addEventListener('click', function() {
+        // Remove active class from all buttons
         projectFilterBtns.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
         const filter = this.getAttribute('data-filter');
         projectCards.forEach(card => {
-          if (filter === 'web') {
-            card.style.display = card.getAttribute('data-category') === 'web' ? '' : 'none';
+          // Show only cards matching the selected filter
+          if (card.getAttribute('data-category') === filter) {
+            card.style.display = '';
           } else {
-            card.style.display = card.getAttribute('data-category') === filter ? '' : 'none';
+            card.style.display = 'none';
           }
         });
       });
@@ -90,15 +90,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// Function to show education details (for onclick in HTML)
 function showDetails(type) {
-    // Hide both details first
-    document.getElementById('school-details').classList.add('hidden');
-    document.getElementById('uni-details').classList.add('hidden');
+  // Hide both details first
+  document.getElementById('school-details').classList.add('hidden');
+  document.getElementById('uni-details').classList.add('hidden');
 
-    // Show the selected one
-    if (type === 'school') {
-        document.getElementById('school-details').classList.remove('hidden');
-    } else if (type === 'uni') {
-        document.getElementById('uni-details').classList.remove('hidden');
-    }
+  // Show the selected one
+  if (type === 'school') {
+    document.getElementById('school-details').classList.remove('hidden');
+  } else if (type === 'uni') {
+    document.getElementById('uni-details').classList.remove('hidden');
+  }
 }
